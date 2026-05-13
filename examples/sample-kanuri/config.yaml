@@ -1,42 +1,70 @@
-# Example delivery — sampled Kanuri data, metadata-only.
+# Example delivery — sampled Kanuri data.
 #
-# This example shows a complete two-flow (freeform + read) delivery using a
-# handful of real Kanuri rows drawn from a 2026-04-23 production delivery,
-# but with no audio bytes — the zips carry only data.json. The pipeline
-# packages the metadata and dataset card; an audio-bearing tarball requires
-# a record_zip with actual WAV files in `audio/`.
+# This file is also the canonical reference for every field the tool
+# understands. Commented-out keys show optional fields you can enable.
 #
 # Run from the repo root:
 #   twbvoice-pack run examples/sample-kanuri/config.yaml
+# ---------------------------------------------------------------------------
 
+# Where outputs land. Relative paths resolve against this YAML's folder.
+# Omit to use the default <config-dir>/out. CLI's --out-dir overrides this.
 output_dir: out
 
+# Internal/admin info — never surfaced to partners.
 delivery:
   date: 2026-04-23
   language: { code: kau, name: Kanuri }
-  partner: GMU                                          # optional, internal
+  partner: GMU                                  # optional
 
+# One or more flows. Flow names are arbitrary (use what fits the delivery —
+# `read`, `freeform`, `spontaneous`, etc.). Each flow has at least a
+# `record_zip`; the validation JSONs are optional.
 flows:
   freeform:
     record_zip:          raw/freeform.zip
-    recording_check:     raw/dataset_27_data.json
-    transcription_check: raw/dataset_29_data.json
+    recording_check:     raw/dataset_27_data.json     # optional
+    transcription_check: raw/dataset_29_data.json     # optional (only for flows with separate transcription step)
   read:
     record_zip:          raw/read.zip
-    recording_check:     raw/dataset_31_data.json
+    recording_check:     raw/dataset_31_data.json     # optional
+    # transcription_check:   raw/...                  # read has no transcription step
 
+# All policy keys are optional. Omitted keys fall back to code defaults
+# (the values shown below).
 policies:
-  include_pending:  true
-  include_rejected: true
-  drop_offensive:   true
-  duplicate_transcriptions: all_mark_canonical
-  canonical_strategy:       verified_then_latest
+  include_pending:  true                                # ship rows not yet validated at the final step
+  include_rejected: true                                # ship rejected rows (reasons preserved in metadata)
+  drop_offensive:   true                                # drop rows flagged offensive by any reviewer
+  duplicate_transcriptions: all_mark_canonical          # or: approved_only
+  canonical_strategy:       verified_then_latest        # canonical row = approved, tie-break by latest created_at
 
+# Everything in `card` ends up in the partner-facing dataset card. Omitted
+# fields produce empty sections (they're skipped, not stubbed out).
 card:
   pretty_name: "Sample Kanuri delivery (2026-04-23)"
   description: |
     Sampled subset of a Kanuri voice delivery for the CLEAR Global TWB Voice
     project. ~28 rows drawn from a production delivery to demonstrate the
-    metadata schema and pipeline behaviour. No audio bytes are included.
-  task_categories: [automatic-speech-recognition]
-  tags: [speech, sample]
+    metadata schema and pipeline behaviour. Audio is silent placeholder.
+  task_categories:                                      # required HF tag
+    - automatic-speech-recognition
+    # - text-to-speech
+    # - audio-classification
+  tags:                                                 # extra HF tags; language code is added automatically
+    - speech
+    - sample
+  # size_categories: 10K<n<100K                         # auto-derived from row count if omitted
+  # license: CC-BY-NC-4.0                               # SPDX string OR { file: ./LICENSE.txt } OR omit
+  # license:
+  #   file: ./LICENSE.txt
+  # citation: |
+  #   @misc{example2026,
+  #     title  = {...},
+  #     author = {...},
+  #     year   = {2026}
+  #   }
+  # contact: |
+  #   team@example.org
+  # acknowledgments: |
+  #   Funded by Foo Foundation under grant XYZ.

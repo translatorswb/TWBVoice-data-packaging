@@ -8,15 +8,13 @@ build/
 dist/
 .DS_Store
 
-# Build outputs of `twbvoice-pack run`
-examples/*/out/
-examples/*/out_*/
-
-# Local-only deliveries — partner data must not be committed.
-# Anything under examples/ that isn't `sample-kanuri/` is treated as local.
+# Only examples/sample-kanuri/ is committed; other delivery folders are local.
 examples/*
 !examples/sample-kanuri/
 !examples/sample-kanuri/**
 
-# But still exclude any large archives or out/ folders inside the sample
-examples/sample-kanuri/out/
+# Inside the sample, exclude the binary tarball and any alt out_* dirs.
+# The rendered card.md and summary.md inside out/ ARE tracked so the generated
+# dataset card is browsable on GitHub.
+examples/sample-kanuri/out/*.tar.gz
+examples/sample-kanuri/out_*/
