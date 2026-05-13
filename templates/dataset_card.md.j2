@@ -1,0 +1,187 @@
+{{ frontmatter }}
+
+# {{ card.pretty_name or (delivery.language.name + ' (' + delivery.language.code + ') — ' + delivery.date) }}
+
+{% if card.description %}{{ card.description }}
+
+{% endif -%}
+## Languages
+
+- `{{ delivery.language.code }}` — {{ delivery.language.name }}
+
+## Dataset Structure
+
+Audio files live under `audio/<flow>/<approval_status>/`. The combined `metadata.json` carries one row per recording (or per transcription, for flows with separate transcribers); each row exposes:
+
+| field | description |
+|---|---|
+| `flow` | Flow name (e.g. `read`, `freeform`). |
+| `audio_path` | Path to the WAV relative to the archive root. |
+| `content.input.prompt` | Text shown to the speaker. |
+| `content.answer.transcription` | Transcription (transcription-bearing flows only). |
+| `content.answer.is_canonical_transcription` | True for the canonical transcription on rows with duplicates. |
+| `content.answer.rejection_reasons` / `rejection_comment` / `reviewer_verdicts` | Recording-check verdict detail. |
+| `content.answer.transcription_check` | Transcription-check verdict detail (transcription-bearing flows). |
+| `content.metadata.user` | Self-reported demographics (year of birth, gender, country, education, language variant). |
+| `approval_status` | `approved` / `pending` / `rejected`. |
+| `hashed_user_id` | SHA-256 hash of the row-owner's user id. |
+| `created_at` | Timestamp. |
+
+## Statistics
+
+{% for fname, f in flows.items() %}
+### `{{ fname }}`
+
+| metric | value |
+|---|---:|
+| Rows | {{ f.stats.rows }} |
+| Distinct audio files | {{ f.stats.distinct_files }} |
+| Distinct speakers (approved) | {{ f.stats.distinct_speakers_approved }} |
+| Total hours (approved) | {{ '%.2f'|format(f.stats.hours_by_status.get('approved', 0)) }} |
+| Approved / pending / rejected | {{ f.stats.approval.get('approved', 0) }} / {{ f.stats.approval.get('pending', 0) }} / {{ f.stats.approval.get('rejected', 0) }} |
+| Median / p95 duration (s) | {{ '%.2f'|format(f.stats.durations.p50 or 0) }} / {{ '%.2f'|format(f.stats.durations.p95 or 0) }} |
+
+**Hours by approval status**
+
+| status | hours |
+|---|---:|
+{% for k, v in f.stats.hours_by_status.items() -%}
+| {{ k }} | {{ '%.2f'|format(v) }} |
+{% endfor %}
+
+_Demographic distributions below are computed on approved recordings only._
+
+{% if f.stats.hours_by_gender_approved -%}
+**Hours by gender** (approved)
+
+| gender | hours |
+|---|---:|
+{% for k, v in f.stats.hours_by_gender_approved.items() -%}
+| {{ k }} | {{ '%.2f'|format(v) }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.hours_by_age_approved -%}
+**Hours by age bucket** (approved)
+
+| age | hours |
+|---|---:|
+{% for k, v in f.stats.hours_by_age_approved.items() -%}
+| {{ k }} | {{ '%.2f'|format(v) }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.speakers_by_gender_approved -%}
+**Speakers by gender** (approved)
+
+| gender | speakers |
+|---|---:|
+{% for k, v in f.stats.speakers_by_gender_approved.items() -%}
+| {{ k }} | {{ v }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.hours_by_country_approved -%}
+**Hours by country of origin** (approved)
+
+| country | hours |
+|---|---:|
+{% for k, v in f.stats.hours_by_country_approved.items() -%}
+| {{ k }} | {{ '%.2f'|format(v) }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.hours_by_variant_approved -%}
+**Hours by language variant** (approved)
+
+| variant | hours |
+|---|---:|
+{% for k, v in f.stats.hours_by_variant_approved.items() -%}
+| {{ k }} | {{ '%.2f'|format(v) }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.recording_check_reasons -%}
+**Recording-check rejection reasons**
+
+| reason | count |
+|---|---:|
+{% for k, v in f.stats.recording_check_reasons.items() -%}
+| {{ k }} | {{ v }} |
+{% endfor %}
+{% endif %}
+
+{% if f.stats.transcription_check_reasons -%}
+**Transcription-check rejection reasons**
+
+| reason | count |
+|---|---:|
+{% for k, v in f.stats.transcription_check_reasons.items() -%}
+| {{ k }} | {{ v }} |
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+
+## Quality Control
+
+Recordings flow through up to four steps: record → recording-check → (optional) transcription → transcription-check. Each check step has up to 3 independent reviewers per item.
+
+Policies applied to this delivery:
+
+- Pending rows: {{ 'kept' if policies.include_pending else 'dropped' }}
+- Rejected rows: {{ 'kept' if policies.include_rejected else 'dropped' }}
+- Offensive-flagged rows (any reviewer): {{ 'dropped' if policies.drop_offensive else 'kept' }}
+- Duplicate transcriptions: {{ policies.duplicate_transcriptions }} (canonical selection: {{ policies.canonical_strategy }})
+
+Recordings flagged for PII at the recording-check step are always excluded.
+
+## Caveats
+
+{% for fname, f in flows.items() %}
+{% set hist = f.stats.rater_count_histogram %}
+{% set single = hist.get(1, 0) %}
+{% set total = f.stats.rows %}
+- `{{ fname }}`: {{ single }} of {{ total }} rows ({{ '%.0f'|format(100 * single / total if total else 0) }}%) reviewed by a single recording-check reviewer.
+{% if f.dropped_offensive %}
+- `{{ fname }}`: {{ f.dropped_offensive|length }} row(s) dropped due to offensive flag.
+{% endif %}
+{% if f.dropped_pending %}
+- `{{ fname }}`: {{ f.dropped_pending|length }} pending row(s) dropped.
+{% endif %}
+{% if f.dropped_rejected %}
+- `{{ fname }}`: {{ f.dropped_rejected|length }} rejected row(s) dropped.
+{% endif %}
+{% if f.pii_dropped %}
+- `{{ fname }}`: {{ f.pii_dropped|length }} row(s) dropped due to PII flag.
+{% endif %}
+{% if f.health.missing_audio %}
+- `{{ fname }}`: ⚠ {{ f.health.missing_audio|length }} audio file(s) referenced in metadata but missing from zip.
+{% endif %}
+{% endfor %}
+
+{% if card.license_id or card.license_file -%}
+## License
+
+{% if card.license_id -%}{{ card.license_id }}{% else %}See `LICENSE` in the archive.{% endif %}
+{% endif %}
+
+{% if card.citation -%}
+## Citation
+
+```
+{{ card.citation }}
+```
+{% endif %}
+
+{% if card.contact -%}
+## Contact
+
+{{ card.contact }}
+{% endif %}
+
+{% if card.acknowledgments -%}
+## Acknowledgments
+
+{{ card.acknowledgments }}
+{% endif %}

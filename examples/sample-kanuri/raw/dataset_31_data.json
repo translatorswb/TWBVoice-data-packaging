@@ -1,0 +1,482 @@
+[
+  {
+    "id": 190876,
+    "hashed_user_id": "7bafcfacb2bdcdc1f643a68c55907e8bb3cf0f26d061619143d47e40593a2407",
+    "task_id": 115523,
+    "input_task_hash": 590213553,
+    "completed_task_hash": -850278095,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Nduli dәro muwonzw kasadə tə kakkadi lan awo sarána satandin loktu doyi kareya cidayi awo tandoyidə badən.",
+        "duration": 16.56,
+        "filename": "69b1780a83cfa.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1995,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "High School Graduate",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:30:56"
+  },
+  {
+    "id": 190879,
+    "hashed_user_id": "7bafcfacb2bdcdc1f643a68c55907e8bb3cf0f26d061619143d47e40593a2407",
+    "task_id": 115530,
+    "input_task_hash": -1473519180,
+    "completed_task_hash": 733636190,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Tangne diya, fitǝna waltǝ kaltǝdǝ kasadǝ jami sammaye fǝleta mǝradǝtǝna suro bǝlayen.",
+        "duration": 8.46,
+        "filename": "69b17a4eecfae.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1995,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "High School Graduate",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:31:36"
+  },
+  {
+    "id": 190880,
+    "hashed_user_id": "7bafcfacb2bdcdc1f643a68c55907e8bb3cf0f26d061619143d47e40593a2407",
+    "task_id": 115532,
+    "input_task_hash": 397413246,
+    "completed_task_hash": 775898406,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Riji cijin loktu am indi au am kadda ye məradənza tilozəyiro waljiya.",
+        "duration": 6.54,
+        "filename": "69b17a81a4eea.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1995,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "High School Graduate",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:31:51"
+  },
+  {
+    "id": 190886,
+    "hashed_user_id": "7e30948aec88b1c4e84f460abe92b459be2020ff1acea106e396e02bc08908fe",
+    "task_id": 115529,
+    "input_task_hash": -158145804,
+    "completed_task_hash": -854407784,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Am fitǝnaye zamzǝna aziya kǝnzǝna nemetigǝa kuru lanná ye sandiya zamzǝna dǝ ngawanakǝnta loktǝ dǝn tǝnitǝniye mǝradǝzana.",
+        "duration": 11.34,
+        "filename": "69b17a2cbe6a2.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2002,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:33:15"
+  },
+  {
+    "id": 190890,
+    "hashed_user_id": "3b422d9a0db96295943f13cd2b711361908284f670a871d74062ef9560ab248b",
+    "task_id": 115531,
+    "input_task_hash": -1502812171,
+    "completed_task_hash": 323835347,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Sandi samma nafsa kǝmbu dawartǝna dǝa jashawu daji Ummi dǝye tawatsǝna Ngare ro kǝmbu tina ro.",
+        "duration": 8.82,
+        "filename": "69b17a7d2aa9b.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1999,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:33:53"
+  },
+  {
+    "id": 190895,
+    "hashed_user_id": "3b422d9a0db96295943f13cd2b711361908284f670a871d74062ef9560ab248b",
+    "task_id": 115528,
+    "input_task_hash": -105425743,
+    "completed_task_hash": -1805912108,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Kawu sabye ciyenno, awo laa faidama gade nongiya ramawa do wuye koro ro njesǝngǝnama mbeji wa?",
+        "duration": 8.88,
+        "filename": "69b179f1d355d.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1999,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:34:34"
+  },
+  {
+    "id": 190896,
+    "hashed_user_id": "7bafcfacb2bdcdc1f643a68c55907e8bb3cf0f26d061619143d47e40593a2407",
+    "task_id": 115526,
+    "input_task_hash": 1444124993,
+    "completed_task_hash": -1135100863,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Kasatnǝm kam buron dawu Boko Haramyen dawuna dǝye kam laa suro fandoye´a lorusajinna?",
+        "duration": 7.86,
+        "filename": "69b17998c8d35.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1995,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "High School Graduate",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:34:50"
+  },
+  {
+    "id": 190900,
+    "hashed_user_id": "0cf55e45f083de5bfa26528e57d6ea87379cba2ca3ac91fb9b659e603c75b868",
+    "task_id": 115527,
+    "input_task_hash": -296935992,
+    "completed_task_hash": 1721129551,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Wuye tangǝna wa kǝla dǝriye gozǝna, daji CJTF ndi au yakkǝ rukkǝna wayanzan poto gozayin.",
+        "duration": 11.22,
+        "filename": "69b179bfacc57.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2004,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:35:17"
+  },
+  {
+    "id": 190902,
+    "hashed_user_id": "3b422d9a0db96295943f13cd2b711361908284f670a871d74062ef9560ab248b",
+    "task_id": 115525,
+    "input_task_hash": 631766944,
+    "completed_task_hash": 99956724,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Cidawa kanjimaliyedә suro loktuyen gәmtәgәa, shawari diyoa kuru kәladәn katap gotaa loktu banna baro.",
+        "duration": 8.22,
+        "filename": "69b179706e7c0.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1999,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:35:37"
+  },
+  {
+    "id": 190909,
+    "hashed_user_id": "3b422d9a0db96295943f13cd2b711361908284f670a871d74062ef9560ab248b",
+    "task_id": 115524,
+    "input_task_hash": -1849736363,
+    "completed_task_hash": 1653198293,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Futuyi ro shi hallamtǝ badiyaramye GBV ye nya banaze cidanǝm gǝláno?",
+        "duration": 9.12,
+        "filename": "69b17967e65d6.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1999,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 14:36:18"
+  },
+  {
+    "id": 191290,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 115760,
+    "input_task_hash": 355335482,
+    "completed_task_hash": 842675580,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Cidawu dǝ amari loktu ganaye sadin karabká suro bǝlayen cidazayin dǝ gǝnyi fallo.",
+        "duration": 16.08,
+        "filename": "69b19a9777994.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "Pronunciation issues or unnatural tone"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 17:03:42"
+  },
+  {
+    "id": 191296,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 115766,
+    "input_task_hash": -1449563444,
+    "completed_task_hash": 640314059,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Dalilla kadda mbejia, bayan yiomadǝa kore ndasonza dalil kura wo kuru bayanzadǝa karne.",
+        "duration": 9.84,
+        "filename": "69b19f4147716.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "Other voices can be heard in the background"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 17:05:21"
+  },
+  {
+    "id": 191299,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 115753,
+    "input_task_hash": 1708574540,
+    "completed_task_hash": 1886318615,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Abi yodo dikkiya sandǝ loktǝ lardǝ doni kwasa COVID-19 ye dǝ tawatkataa lan iskiya ?",
+        "duration": 12.66,
+        "filename": "69b1997b09185.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "Pronunciation issues or unnatural tone"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 17:06:27"
+  },
+  {
+    "id": 191645,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 115893,
+    "input_task_hash": 716464717,
+    "completed_task_hash": 2061254765,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Dunya samma son, 50% am doyi fitәna nəmzaləm nəmetəye zamzənadə sa´anza 15 au cidiyan.",
+        "duration": 14.34,
+        "filename": "69b1c4246e668.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "The recording does not match the text or is incomplete"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 20:22:47"
+  },
+  {
+    "id": 191667,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 115903,
+    "input_task_hash": -471938471,
+    "completed_task_hash": -1546101241,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Ngәwusoro cidawu kampu ye dәa ngodonәm do nyiro am gadi sadin dәro manaza do luwumin.",
+        "duration": 10.02,
+        "filename": "69b1c63725938.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "Pronunciation issues or unnatural tone"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-11 20:38:01"
+  }
+]

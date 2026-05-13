@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+# Build outputs of `twbvoice-pack run`
+examples/*/out/
+examples/*/out_*/
+
+# Local-only deliveries — partner data must not be committed.
+# Anything under examples/ that isn't `sample-kanuri/` is treated as local.
+examples/*
+!examples/sample-kanuri/
+!examples/sample-kanuri/**
+
+# But still exclude any large archives or out/ folders inside the sample
+examples/sample-kanuri/out/

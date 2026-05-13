@@ -1,0 +1,418 @@
+[
+  {
+    "id": 184331,
+    "hashed_user_id": "e9c29dc2f952d349484fe5c079cd77aaed6f4a3fb4dcf00d338e12ade1ecee92",
+    "task_id": 107471,
+    "input_task_hash": -1257530806,
+    "completed_task_hash": 1202632635,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Kam laa ye cuworo ndaran nduliye leza biskezayin suro kamfuyen suro nzǝliwoyen. Awi sandiro bayangəm?",
+        "duration": 17.46,
+        "filename": "697dcfc546a19.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -1,
+        "rejection_reasons": [
+          "Contains offensive or inappropriate content"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2005,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 10:11:00"
+  },
+  {
+    "id": 184353,
+    "hashed_user_id": "7e30948aec88b1c4e84f460abe92b459be2020ff1acea106e396e02bc08908fe",
+    "task_id": 107471,
+    "input_task_hash": -1257530806,
+    "completed_task_hash": -24788730,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Kam laa ye cuworo ndaran nduliye leza biskezayin suro kamfuyen suro nzǝliwoyen. Awi sandiro bayangəm?",
+        "duration": 17.46,
+        "filename": "697dcfc546a19.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2002,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 10:14:49"
+  },
+  {
+    "id": 184360,
+    "hashed_user_id": "0cf55e45f083de5bfa26528e57d6ea87379cba2ca3ac91fb9b659e603c75b868",
+    "task_id": 107471,
+    "input_task_hash": -1257530806,
+    "completed_task_hash": 868201873,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Kam laa ye cuworo ndaran nduliye leza biskezayin suro kamfuyen suro nzǝliwoyen. Awi sandiro bayangəm?",
+        "duration": 17.46,
+        "filename": "697dcfc546a19.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 1
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2004,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 10:16:07"
+  },
+  {
+    "id": 184427,
+    "hashed_user_id": "e9c29dc2f952d349484fe5c079cd77aaed6f4a3fb4dcf00d338e12ade1ecee92",
+    "task_id": 107514,
+    "input_task_hash": 1883458473,
+    "completed_task_hash": -2065005807,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Yalla laaye nya cuworo tentǝ au naptǝram ndaso zauro ngǝla wo. Gala jili wi sandiro yimin?",
+        "duration": 12,
+        "filename": "697dd816aaf78.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 1
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2005,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 10:34:06"
+  },
+  {
+    "id": 184474,
+    "hashed_user_id": "7e30948aec88b1c4e84f460abe92b459be2020ff1acea106e396e02bc08908fe",
+    "task_id": 107514,
+    "input_task_hash": 1883458473,
+    "completed_task_hash": 1295442000,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Yalla laaye nya cuworo tentǝ au naptǝram ndaso zauro ngǝla wo. Gala jili wi sandiro yimin?",
+        "duration": 12,
+        "filename": "697dd816aaf78.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2002,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 10:43:53"
+  },
+  {
+    "id": 184530,
+    "hashed_user_id": "0cf55e45f083de5bfa26528e57d6ea87379cba2ca3ac91fb9b659e603c75b868",
+    "task_id": 107538,
+    "input_task_hash": -1933986910,
+    "completed_task_hash": 619210366,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Nanǝmin kǝmbuwa noata kau gana laaye dǝga maa, jili wiro kǝmbu fasallǝmin kǝlanǝmro duno yirawuro?",
+        "duration": 12.6,
+        "filename": "697de76a12f12.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -1,
+        "rejection_comment": "Not correct",
+        "rejection_reasons": [
+          "The answer is completely unrelated to the question"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2004,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 11:35:47"
+  },
+  {
+    "id": 184531,
+    "hashed_user_id": "e9c29dc2f952d349484fe5c079cd77aaed6f4a3fb4dcf00d338e12ade1ecee92",
+    "task_id": 107538,
+    "input_task_hash": -1933986910,
+    "completed_task_hash": -1955411224,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Nanǝmin kǝmbuwa noata kau gana laaye dǝga maa, jili wiro kǝmbu fasallǝmin kǝlanǝmro duno yirawuro?",
+        "duration": 12.6,
+        "filename": "697de76a12f12.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -1,
+        "rejection_reasons": [
+          "Contains personally identifiable information (e.g. name, address, telephone number)"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2005,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 11:36:33"
+  },
+  {
+    "id": 184532,
+    "hashed_user_id": "7e30948aec88b1c4e84f460abe92b459be2020ff1acea106e396e02bc08908fe",
+    "task_id": 107538,
+    "input_task_hash": -1933986910,
+    "completed_task_hash": -1435189915,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Nanǝmin kǝmbuwa noata kau gana laaye dǝga maa, jili wiro kǝmbu fasallǝmin kǝlanǝmro duno yirawuro?",
+        "duration": 12.6,
+        "filename": "697de76a12f12.wav"
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "The answer is completely unrelated to the question"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2002,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-01-31 11:36:53"
+  },
+  {
+    "id": 187781,
+    "hashed_user_id": "e9c29dc2f952d349484fe5c079cd77aaed6f4a3fb4dcf00d338e12ade1ecee92",
+    "task_id": 110625,
+    "input_task_hash": 120887691,
+    "completed_task_hash": 1027279843,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Am bəlin isanadəye futu regista babro ikkoyi dəa suworəna dalil yallanzaye bana do hakkunzaye fandodən. Tartip jiliyi cidama kampu dəa fasaltəye dəye cin?",
+        "duration": 17.46,
+        "filename": "6985b3944965b.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2005,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-02-06 09:42:51"
+  },
+  {
+    "id": 187940,
+    "hashed_user_id": "0cf55e45f083de5bfa26528e57d6ea87379cba2ca3ac91fb9b659e603c75b868",
+    "task_id": 110905,
+    "input_task_hash": 714387420,
+    "completed_task_hash": -1046008862,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Misallo kosaa kasamlan tuwondin bəlaro tartəyin də wune. Tartif kəla nzətkawu ye jiliyi mashiwanəm soro bayangəmin?",
+        "duration": 17.88,
+        "filename": "698651ee5114c.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2004,
+          "country_of_origin": "SAUDI ARABIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-02-06 21:13:13"
+  },
+  {
+    "id": 189942,
+    "hashed_user_id": "e743c0a1a7433627cf61a4970e3b94ac8a02493474444da1e3d70da6f171352c",
+    "task_id": 112893,
+    "input_task_hash": 1502617673,
+    "completed_task_hash": 128163060,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Loktu samno jama belayen, jiliyin awowa bəlin au amariya kashimo cidayi fandǝmiya cirám?",
+        "duration": 14.76,
+        "filename": "698cf1d12daf3.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "Nigeria",
+          "gender": "Male",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-02-11 23:44:48"
+  },
+  {
+    "id": 189968,
+    "hashed_user_id": "eadfee382fe9d57f31277cbc280080aba4049a1c9c91903dedf238c30200641e",
+    "task_id": 112914,
+    "input_task_hash": 1886704952,
+    "completed_task_hash": -859245872,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Bayanne futu na naptəye ngəlatəyen loktu karewa nəmgəlaye au fəratəye ganaro waljiya.",
+        "duration": 20.46,
+        "filename": "698d4f55b4b05.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 2007,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Some College, No Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-02-12 04:14:18"
+  },
+  {
+    "id": 189969,
+    "hashed_user_id": "9045487a5ae93c8b359ab6088ad99fb1e46956425d1a3c6dadec2fec2b6bd041",
+    "task_id": 112928,
+    "input_task_hash": -1373373310,
+    "completed_task_hash": 1832297832,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Nyiro futu data faidatə fulutǝ kawuliwa faidáye fandoro tǝliwu. Ayi shawariro yimin?",
+        "duration": 18.84,
+        "filename": "698d52497024b.wav"
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1993,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-02-12 04:45:47"
+  }
+]

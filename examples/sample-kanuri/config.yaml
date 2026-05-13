@@ -1,0 +1,42 @@
+# Example delivery — sampled Kanuri data, metadata-only.
+#
+# This example shows a complete two-flow (freeform + read) delivery using a
+# handful of real Kanuri rows drawn from a 2026-04-23 production delivery,
+# but with no audio bytes — the zips carry only data.json. The pipeline
+# packages the metadata and dataset card; an audio-bearing tarball requires
+# a record_zip with actual WAV files in `audio/`.
+#
+# Run from the repo root:
+#   twbvoice-pack run examples/sample-kanuri/config.yaml
+
+output_dir: out
+
+delivery:
+  date: 2026-04-23
+  language: { code: kau, name: Kanuri }
+  partner: GMU                                          # optional, internal
+
+flows:
+  freeform:
+    record_zip:          raw/freeform.zip
+    recording_check:     raw/dataset_27_data.json
+    transcription_check: raw/dataset_29_data.json
+  read:
+    record_zip:          raw/read.zip
+    recording_check:     raw/dataset_31_data.json
+
+policies:
+  include_pending:  true
+  include_rejected: true
+  drop_offensive:   true
+  duplicate_transcriptions: all_mark_canonical
+  canonical_strategy:       verified_then_latest
+
+card:
+  pretty_name: "Sample Kanuri delivery (2026-04-23)"
+  description: |
+    Sampled subset of a Kanuri voice delivery for the CLEAR Global TWB Voice
+    project. ~28 rows drawn from a production delivery to demonstrate the
+    metadata schema and pipeline behaviour. No audio bytes are included.
+  task_categories: [automatic-speech-recognition]
+  tags: [speech, sample]

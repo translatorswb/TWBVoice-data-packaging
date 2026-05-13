@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twbvoice-data-packaging"
+version = "0.1.0"
+description = "Package TWB Voice / LT4CR data deliveries: enrich metadata, generate dataset cards, build tarballs, push to Hugging Face."
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+hf = ["huggingface_hub>=0.24", "pandas>=2.0", "pyarrow>=15.0"]
+
+[project.scripts]
+twbvoice-pack = "twbvoice_pack.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]

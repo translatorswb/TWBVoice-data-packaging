@@ -1,0 +1,174 @@
+[
+  {
+    "id": 193833,
+    "hashed_user_id": "9045487a5ae93c8b359ab6088ad99fb1e46956425d1a3c6dadec2fec2b6bd041",
+    "task_id": 113565,
+    "input_task_hash": 990450995,
+    "completed_task_hash": -367584481,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Am bəlin isanadəye futu regista babro ikkoyi dəa suworəna dalil yallanzaye bana do hakkunzaye fandodən. Tartip jiliyi cidama kampu dəa fasaltəye dəye cin?",
+        "duration": 17.46,
+        "filename": "6985b3944965b.wav",
+        "transcription": "Nyǝnnó dowo ngo amma mbeji kǝmma ngawon isanamadǝ tamoniyeni sandiya tamoniyiya bali au bali kojiya dai nyeyiye sundodǝa babro ikkǝye dai awo isǝnauso naiye dai nǝwando fanduwin nyennó kanadi gonó.",
+        "recording_accepted": true
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1993,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-12 17:15:24"
+  },
+  {
+    "id": 194448,
+    "hashed_user_id": "9045487a5ae93c8b359ab6088ad99fb1e46956425d1a3c6dadec2fec2b6bd041",
+    "task_id": 113558,
+    "input_task_hash": -1161855592,
+    "completed_task_hash": -1161804695,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Bayanne futu na naptəye ngəlatəyen loktu karewa nəmgəlaye au fəratəye ganaro waljiya.",
+        "duration": 20.46,
+        "filename": "698d4f55b4b05.wav",
+        "transcription": "Loktu done karaiya nǝmngǝlai aw fǝratai kanaro waljiya futu nanabtainǝm ngelaro waltindǝ shima daji wande aiso cidin finini misallo magimsoyai kuwulnǝmiya shararo yadǝm fiyimin sau suddoknǝm fǝrataiso baude sǝkkǝ.",
+        "recording_accepted": true
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1993,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-13 07:32:28"
+  },
+  {
+    "id": 194480,
+    "hashed_user_id": "9045487a5ae93c8b359ab6088ad99fb1e46956425d1a3c6dadec2fec2b6bd041",
+    "task_id": 113559,
+    "input_task_hash": -1353400789,
+    "completed_task_hash": 330450268,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Misallo kosaa kasamlan tuwondin bəlaro tartəyin də wune. Tartif kəla nzətkawu ye jiliyi mashiwanəm soro bayangəmin?",
+        "duration": 17.88,
+        "filename": "698651ee5114c.wav",
+        "transcription": "Bayan doni mashiyayiro yǝkkin dǝ shima dai korde sodǝa kadau baro taiye sau kwasasodǝ suro kasammǝlan fomzaiyen dio kurusonin sabisoro fuskandǝro face mask soa yǝkkǝu zǝtkawu kǝlande nankaro.",
+        "recording_accepted": true
+      },
+      "answer": {
+        "accepted": true,
+        "weighted_score": 3
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1993,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-13 08:05:31"
+  },
+  {
+    "id": 199060,
+    "hashed_user_id": "96586156b04af33021c6b0c6729f80c50d1d3ee942e3523607e0f0bcec2aaf47",
+    "task_id": 113568,
+    "input_task_hash": -1188224606,
+    "completed_task_hash": 1400250245,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Yalla laaye nya cuworo tentǝ au naptǝram ndaso zauro ngǝla wo. Gala jili wi sandiro yimin?",
+        "duration": 12,
+        "filename": "697dd816aaf78.wav",
+        "transcription": "A'a gala doni sairo yikkinmade shima sairo lukǝ jire gulluwukin nabtǝram laiye ngǝyiye nguro ngǝyiye ade shima ngǝlairo.",
+        "recording_accepted": true
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_comment": "ikkinmadǝ transcribed as yikkinmade.",
+        "rejection_reasons": [
+          "Grammar or spelling issues"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-18 13:01:43"
+  },
+  {
+    "id": 199098,
+    "hashed_user_id": "96586156b04af33021c6b0c6729f80c50d1d3ee942e3523607e0f0bcec2aaf47",
+    "task_id": 113586,
+    "input_task_hash": 152323920,
+    "completed_task_hash": 1915403269,
+    "approval_status": "approved",
+    "content": {
+      "input": {
+        "prompt": "Loktu samno jama belayen, jiliyin awowa bəlin au amariya kashimo cidayi fandǝmiya cirám?",
+        "duration": 14.76,
+        "filename": "698cf1d12daf3.wav",
+        "transcription": "na doni samnoyedǝ warmazaya ráko au bin bǝlado zasá mauzayin.",
+        "recording_accepted": true
+      },
+      "answer": {
+        "accepted": false,
+        "weighted_score": -3,
+        "rejection_reasons": [
+          "Grammar or spelling issues"
+        ]
+      },
+      "metadata": {
+        "source": "lt4cr",
+        "language": "kau",
+        "user": {
+          "year_of_birth": 1992,
+          "country_of_origin": "NIGERIA",
+          "gender": "Female",
+          "education_level": "Bachelor Degree",
+          "language_variant": "Central"
+        }
+      }
+    },
+    "created_at": "2026-03-18 13:18:38"
+  }
+]
