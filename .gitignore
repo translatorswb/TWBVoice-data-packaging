@@ -18,3 +18,7 @@ examples/*
 # dataset card is browsable on GitHub.
 examples/sample-kanuri/out/*.tar.gz
 examples/sample-kanuri/out_*/
+
+# Re-ignore .DS_Store underneath sample-kanuri (the negation above otherwise
+# un-ignores it).
+examples/sample-kanuri/**/.DS_Store
