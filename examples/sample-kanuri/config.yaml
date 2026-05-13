@@ -55,16 +55,26 @@ card:
     - speech
     - sample
   # size_categories: 10K<n<100K                         # auto-derived from row count if omitted
-  # license: CC-BY-NC-4.0                               # SPDX string OR { file: ./LICENSE.txt } OR omit
+  license: CC-BY-NC-4.0                               # SPDX string OR { file: ./LICENSE.txt } OR omit
   # license:
   #   file: ./LICENSE.txt
-  # citation: |
-  #   @misc{example2026,
-  #     title  = {...},
-  #     author = {...},
-  #     year   = {2026}
-  #   }
-  # contact: |
-  #   team@example.org
-  # acknowledgments: |
-  #   Funded by Foo Foundation under grant XYZ.
+  citation: |
+    @misc{example2026,
+      title  = {...},
+      author = {...},
+      year   = {2026}
+    }
+  contact: |
+    team@example.org
+  acknowledgments: |
+    Funded by Foo Foundation under grant XYZ.
+  data_collection: |
+    The dataset was collected through the TWB Voice platform coordinated by
+    CLEAR Global. Native speakers were asked to read prompted text in their
+    respective languages, and (for freeform flows) to speak freely on a
+    given topic.
+  ethical_considerations: |
+    - All speakers consented to data collection and open publishing.
+    - Speaker identities are anonymized using hashed user IDs.
+    - No attempts should be made to identify individual speakers.
+    - Data should be used responsibly for technology development.

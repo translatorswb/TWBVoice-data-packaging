@@ -1,6 +1,7 @@
 ---
 language:
   - kau
+license: CC-BY-NC-4.0
 task_categories:
   - automatic-speech-recognition
 size_categories:
@@ -10,8 +11,8 @@ tags:
   - speech
   - sample
 pretty_name: "Sample Kanuri delivery (2026-04-23)"
-download_size: 7670
-dataset_size: 75865
+download_size: 8082
+dataset_size: 76648
 ---
 
 # Sample Kanuri delivery (2026-04-23)
@@ -167,7 +168,17 @@ _Demographic distributions below are computed on approved recordings only._
 
 
 
-## Quality Control
+## Dataset Creation
+
+### Data Collection
+
+The dataset was collected through the TWB Voice platform coordinated by
+CLEAR Global. Native speakers were asked to read prompted text in their
+respective languages, and (for freeform flows) to speak freely on a
+given topic.
+
+
+### Quality Control
 
 Recordings flow through up to four steps: record → recording-check → (optional) transcription → transcription-check. Each check step has up to 3 independent reviewers per item.
 
@@ -180,12 +191,40 @@ Policies applied to this delivery:
 
 Recordings flagged for PII at the recording-check step are always excluded.
 
+## Ethical Considerations
+
+- All speakers consented to data collection and open publishing.
+- Speaker identities are anonymized using hashed user IDs.
+- No attempts should be made to identify individual speakers.
+- Data should be used responsibly for technology development.
+
+
 ## Caveats
 
 - `freeform`: 7 of 9 rows (78%) reviewed by a single recording-check reviewer.
 - `freeform`: 3 row(s) dropped due to offensive flag.
 - `read`: 15 of 16 rows (94%) reviewed by a single recording-check reviewer.
 
+## License
+
+CC-BY-NC-4.0
+## Citation
+
+```
+@misc{example2026,
+  title  = {...},
+  author = {...},
+  year   = {2026}
+}
+
+```
+
+## Contact
+
+team@example.org
 
 
+## Acknowledgments
+
+Funded by Foo Foundation under grant XYZ.
 

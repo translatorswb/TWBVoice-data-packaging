@@ -71,6 +71,8 @@ class CardSpec:
     citation: str | None = None
     contact: str | None = None
     acknowledgments: str | None = None
+    data_collection: str | None = None
+    ethical_considerations: str | None = None
 
 
 @dataclass
@@ -174,6 +176,8 @@ def load(path: str | Path, output_dir: str | Path | None = None) -> Config:
         citation=cblk.get("citation"),
         contact=cblk.get("contact"),
         acknowledgments=cblk.get("acknowledgments"),
+        data_collection=cblk.get("data_collection"),
+        ethical_considerations=cblk.get("ethical_considerations"),
     )
 
     # ----- flows block -----

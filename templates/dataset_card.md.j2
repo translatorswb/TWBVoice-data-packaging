@@ -123,7 +123,15 @@ _Demographic distributions below are computed on approved recordings only._
 
 {% endfor %}
 
-## Quality Control
+## Dataset Creation
+
+{% if card.data_collection -%}
+### Data Collection
+
+{{ card.data_collection }}
+
+{% endif -%}
+### Quality Control
 
 Recordings flow through up to four steps: record → recording-check → (optional) transcription → transcription-check. Each check step has up to 3 independent reviewers per item.
 
@@ -135,6 +143,12 @@ Policies applied to this delivery:
 - Duplicate transcriptions: {{ policies.duplicate_transcriptions }} (canonical selection: {{ policies.canonical_strategy }})
 
 Recordings flagged for PII at the recording-check step are always excluded.
+
+{% if card.ethical_considerations -%}
+## Ethical Considerations
+
+{{ card.ethical_considerations }}
+{% endif %}
 
 ## Caveats
 
