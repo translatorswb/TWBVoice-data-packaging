@@ -12,8 +12,11 @@ Layout on HF:
     pending             — rows with approval_status == "pending".
 
 Audio bytes are embedded into the Parquet under an `audio` column with the
-schema HuggingFace's Audio feature expects (`{"bytes": ..., "path": ...}`).
-This means the HF dataset viewer renders the audio inline.
+schema HuggingFace's Audio feature expects (`{"bytes": ..., "path": ...}`), and
+every shard carries the `huggingface` Arrow schema metadata that
+`datasets.Dataset.to_parquet` writes for an `Audio` feature. The metadata is
+what makes the HF dataset viewer render the audio inline -- a bare
+`struct<bytes, path>` column is shown as an opaque struct with no player.
 
 The README.md uploaded to the repo is the dataset card produced by
 `twbvoice-pack run`, with the HF `configs:` block injected into the YAML
@@ -46,13 +49,15 @@ def _import_hf():
     try:
         from huggingface_hub import HfApi, create_repo
         import pandas as pd
+        import pyarrow as pa
+        import pyarrow.parquet as pq
     except ImportError as e:
         sys.exit(
             "Missing optional deps. Install with: "
             'pip install "twbvoice-data-packaging[hf]"\n'
             f"({e})"
         )
-    return HfApi, create_repo, pd
+    return HfApi, create_repo, pd, pa, pq
 
 
 # --------------------------------------------------------------------------- #
@@ -165,14 +170,73 @@ def _inject_configs_frontmatter(card_md: str, groups: dict[tuple[str, str], list
     return head + configs_block + "\n" + end + card_md[m.end():]
 
 
+# Arrow type -> `datasets` Value dtype, for the `huggingface` schema metadata.
+_VALUE_DTYPES = {
+    "string": "string",
+    "large_string": "large_string",
+    "float": "float32",
+    "double": "float64",
+    "int8": "int8",
+    "int16": "int16",
+    "int32": "int32",
+    "int64": "int64",
+    "uint8": "uint8",
+    "uint16": "uint16",
+    "uint32": "uint32",
+    "uint64": "uint64",
+    "bool": "bool",
+    # A column that is null across a whole split infers as Arrow `null`; that is
+    # exactly how `datasets` types such a column (`Value("null")`).
+    "null": "null",
+}
+
+def _hf_feature(pa, arrow_type) -> dict | None:
+    """Arrow type -> `datasets` feature dict, or None if we can't map it."""
+    if pa.types.is_list(arrow_type) or pa.types.is_large_list(arrow_type):
+        inner = _hf_feature(pa, arrow_type.value_type)
+        # `Sequence` names its member "feature" (not "dtype", unlike `Value`).
+        return None if inner is None else {"_type": "Sequence", "feature": inner}
+    dtype = _VALUE_DTYPES.get(str(arrow_type))
+    return None if dtype is None else {"dtype": dtype, "_type": "Value"}
+
+
+def _hf_schema_metadata(pa, schema) -> dict[bytes, bytes] | None:
+    """Arrow schema metadata declaring `audio` as an `Audio` feature.
+
+    This mirrors what `datasets.Dataset.to_parquet` writes, and is what makes
+    the Hub viewer treat the column as playable audio. Returns None if any
+    column type has no `datasets` equivalent, in which case no metadata is
+    written rather than writing a feature spec we can't vouch for.
+    """
+    features: dict[str, dict] = {}
+    for field in schema:
+        if field.name == "audio":
+            features[field.name] = {"_type": "Audio"}
+            continue
+        feature = _hf_feature(pa, field.type)
+        if feature is None:
+            print(
+                f"    ! no datasets dtype for column {field.name!r} ({field.type}); "
+                "writing Parquet without huggingface schema metadata"
+            )
+            return None
+        features[field.name] = feature
+    info = json.dumps({"info": {"features": features}})
+    return {b"huggingface": info.encode("utf-8")}
+
+
 def _write_parquets(
     groups: dict[tuple[str, str], list[dict]],
     audio: dict[str, bytes],
     repo_root: Path,
     pd,
+    pa,
+    pq,
 ) -> dict[tuple[str, str], int]:
     """Build one Parquet per (flow, split). Returns sizes per group."""
     sizes: dict[tuple[str, str], int] = {}
+    # HF's Audio feature: bytes first, then the original file name.
+    audio_type = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
     for (flow, split), rows in groups.items():
         records_flat = []
         for r in rows:
@@ -187,7 +251,21 @@ def _write_parquets(
         target = repo_root / "data" / flow
         target.mkdir(parents=True, exist_ok=True)
         path = target / f"{split}-00000-of-00001.parquet"
-        df.to_parquet(path, index=False)
+
+        table = pa.Table.from_pandas(df, preserve_index=False)
+        # Pin the audio column to HF's Audio struct layout. A group with no
+        # audio at all (e.g. rejected rows) infers as Arrow `null`, which no
+        # viewer can present as audio.
+        idx = table.column_names.index("audio")
+        column = table.column("audio")
+        if column.null_count == table.num_rows:
+            column = pa.nulls(table.num_rows, type=audio_type)
+        table = table.set_column(idx, "audio", column.cast(audio_type))
+
+        metadata = _hf_schema_metadata(pa, table.schema)
+        if metadata:
+            table = table.replace_schema_metadata(metadata)
+        pq.write_table(table, path)
         sizes[(flow, split)] = path.stat().st_size
     return sizes
 
@@ -204,7 +282,7 @@ def push(
     private: bool = True,
     dry_run: bool = False,
 ) -> int:
-    HfApi, create_repo, pd = _import_hf()
+    HfApi, create_repo, pd, pa, pq = _import_hf()
 
     tar_path = _find_tarball(out_dir)
     print(f"  source tarball:  {tar_path.name} ({tar_path.stat().st_size / 1e9:.2f} GB)")
@@ -235,7 +313,7 @@ def push(
         # Stage repo layout
         repo_root = td / "_hf_repo"
         repo_root.mkdir()
-        sizes = _write_parquets(groups, audio, repo_root, pd)
+        sizes = _write_parquets(groups, audio, repo_root, pd, pa, pq)
         for (flow, split), nbytes in sorted(sizes.items()):
             print(f"    data/{flow}/{split}-*.parquet  {nbytes / 1e6:.1f} MB")
 
